@@ -2,7 +2,14 @@
 
 面向 **[毛の博客](https://blog.huchao.vip/)**（My-Firefly-Blog）的全屏动效 404 错误页。页面以橙色渐变背景、巨型背景「404」、居中狐狸循环视频与侧滑菜单为核心视觉。
 
-本仓库为 **独立 Vite + React 原型**，便于预览与迭代；后续可集成进 Astro 博客替换 `src/pages/404.astro`。
+本仓库为 **独立 Vite + React 原型**：https://github.com/mao888/fun-page-404
+
+已集成进 My-Firefly-Blog：
+
+- 组件：`My-Firefly-Blog/src/components/pages/Fun404Page.tsx`
+- 配置：`My-Firefly-Blog/src/config/fun404Config.ts`
+- 页面：`My-Firefly-Blog/src/pages/404.astro`
+- 仅「不存在的路径」落入本页；密码文章仍正常打开并输入密码解锁
 
 ---
 
