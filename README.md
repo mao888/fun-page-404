@@ -1,8 +1,10 @@
+![fun-page-404 示例](https://img.huchao.vip/file/post/blog/1784212489056_image.png)
+
 # fun-page-404 — 毛の博客创意 404 页
 
 面向 **[毛の博客](https://blog.huchao.vip/)**（My-Firefly-Blog）的全屏动效 404 错误页。页面以橙色渐变背景、巨型背景「404」、居中狐狸循环视频与侧滑菜单为核心视觉。
 
-本仓库为 **独立 Vite + React 原型**：https://github.com/mao888/fun-page-404
+本仓库为 **独立 Vite + React 原型**：[https://github.com/mao888/fun-page-404](https://github.com/mao888/fun-page-404)
 
 已集成进 My-Firefly-Blog：
 
@@ -24,20 +26,28 @@
 
 ---
 
+
+
 ## 居中狐狸角色说明
+
+
 
 ### 是图片还是代码？
 
 **都不是本地资源，也不是 CSS/SVG 画出来的。**
 
-狐狸是一个 **预渲染好的 3D 循环视频（`.mp4`）**，通过 `<video>` 标签播放，再用 CSS 混合模式与橙色背景融合。
+狐狸是一个 **预渲染好的 3D 循环视频（**`.mp4`**）**，通过 `<video>` 标签播放，再用 CSS 混合模式与橙色背景融合。
 
-| 项目 | 说明 |
-|------|------|
-| 素材类型 | 外部 MP4 视频（3D 角色动画） |
-| 配置位置 | `src/site-config.ts` → `heroVideoSrc` |
+
+| 项目   | 说明                                                        |
+| ---- | --------------------------------------------------------- |
+| 素材类型 | 外部 MP4 视频（3D 角色动画）                                        |
+| 配置位置 | `src/site-config.ts` → `heroVideoSrc`                     |
 | 渲染位置 | `src/App.tsx` → `<video autoPlay loop muted playsInline>` |
-| 融合方式 | `mix-blend-darken` + 橙色渐变背景 + 白色背景椭圆 |
+| 融合方式 | `mix-blend-darken` + 橙色渐变背景 + 白色背景椭圆                      |
+
+
+
 
 ### 配置入口
 
@@ -46,6 +56,8 @@
 heroVideoSrc:
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260713_234424_b1332b69-2e69-4302-8dbc-40f86846afbd.mp4",
 ```
+
+
 
 ### 页面渲染代码
 
@@ -61,11 +73,15 @@ heroVideoSrc:
 />
 ```
 
+
+
 ### 为什么用 `mix-blend-darken`？
 
 视频本身带暖色/浅色背景。在 **橙色页面渐变** 上使用 `mix-blend-darken`，可以让视频背景与页面背景自然融合，只保留狐狸角色主体。
 
 > 该视频非透明底，与博客蓝色主题难以完全兼容；当前保留原橙色整页方案以保证狐狸显示效果。
+
+
 
 ### 如何替换狐狸素材
 
@@ -90,18 +106,24 @@ heroVideoSrc: "/fox.mp4",
 
 ---
 
+
+
 ## 技术栈
 
-| 类别 | 技术 |
-|------|------|
-| 框架 | React 19 |
-| 构建 | Vite 8 |
-| 语言 | TypeScript |
-| 样式 | Tailwind CSS 3 |
-| 图标 | lucide-react |
-| 字体 | Inter（Google Fonts） |
+
+| 类别  | 技术                  |
+| --- | ------------------- |
+| 框架  | React 19            |
+| 构建  | Vite 8              |
+| 语言  | TypeScript          |
+| 样式  | Tailwind CSS 3      |
+| 图标  | lucide-react        |
+| 字体  | Inter（Google Fonts） |
+
 
 ---
+
+
 
 ## 快速开始
 
@@ -114,6 +136,8 @@ npm run preview
 ```
 
 ---
+
+
 
 ## 项目结构
 
@@ -132,31 +156,41 @@ fun-page-404/
 
 ---
 
+
+
 ## 站点配置（`site-config.ts`）
 
-| 字段 | 当前值 | 说明 |
-|------|--------|------|
-| `title` | 毛 | 导航 Logo 主标题 |
-| `subtitle` | 毛の博客 | 副标题 |
-| `logo.src` | 头像 URL | 与博客 `siteConfig.navbar.logo` 对齐 |
-| `colors.gradientTop/Bottom` | `#FF8233` → `#FDAC55` | 页面背景渐变 |
-| `colors.accent` | `#F16524` | 按钮 / 菜单强调色 |
-| `heroVideoSrc` | CloudFront MP4 URL | **居中狐狸视频地址** |
-| `navLinks` | 主页 / 博客 / 归档 / 分类 / 关于 | 与博客路由对齐 |
+
+| 字段                          | 当前值                    | 说明                              |
+| --------------------------- | ---------------------- | ------------------------------- |
+| `title`                     | 毛                      | 导航 Logo 主标题                     |
+| `subtitle`                  | 毛の博客                   | 副标题                             |
+| `logo.src`                  | 头像 URL                 | 与博客 `siteConfig.navbar.logo` 对齐 |
+| `colors.gradientTop/Bottom` | `#FF8233` → `#FDAC55`  | 页面背景渐变                          |
+| `colors.accent`             | `#F16524`              | 按钮 / 菜单强调色                      |
+| `heroVideoSrc`              | CloudFront MP4 URL     | **居中狐狸视频地址**                    |
+| `navLinks`                  | 主页 / 博客 / 归档 / 分类 / 关于 | 与博客路由对齐                         |
+
 
 ---
+
+
 
 ## 中文文案
 
-| 位置 | 文案 |
-|------|------|
-| 页面标题 | 404 - 页面未找到 \| 毛の博客 |
-| 主提示 | 这一页好像飘到星海之外了… |
-| 副提示 | 链接可能已失效，或页面从未存在过。不如先回首页看看？ |
-| 主 CTA | 返回首页 |
-| 次 CTA | 浏览博客 |
+
+| 位置    | 文案                         |
+| ----- | -------------------------- |
+| 页面标题  | 404 - 页面未找到                |
+| 主提示   | 这一页好像飘到星海之外了…              |
+| 副提示   | 链接可能已失效，或页面从未存在过。不如先回首页看看？ |
+| 主 CTA | 返回首页                       |
+| 次 CTA | 浏览博客                       |
+
 
 ---
+
+
 
 ## 集成到 My-Firefly-Blog
 
@@ -174,15 +208,19 @@ import Fun404Page from "@/components/pages/Fun404Page";
 <Fun404Page client:load />
 ```
 
-3. 404 页**不要**包 `MainGridLayout`，保持全屏
-4. 导航链接已指向 `/blog/`、`/archive/` 等，与博客路由一致
-5. 狐狸视频可继续用远程 URL，或下载后放入博客 `public/` 目录
+1. 404 页**不要**包 `MainGridLayout`，保持全屏
+2. 导航链接已指向 `/blog/`、`/archive/` 等，与博客路由一致
+3. 狐狸视频可继续用远程 URL，或下载后放入博客 `public/` 目录
+
+
 
 ### 方案 B：静态构建嵌入
 
 1. 在本仓库 `npm run build`
 2. 将 `dist/` 资源复制到博客 `public/404-app/`
 3. 在 `404.astro` 用 iframe 或内联挂载（维护成本较高，一般不推荐）
+
+
 
 ### 集成检查清单
 
@@ -193,7 +231,11 @@ import Fun404Page from "@/components/pages/Fun404Page";
 
 ---
 
+
+
 ## 改造教程
+
+
 
 ### 换配色
 
@@ -213,6 +255,8 @@ import Fun404Page from "@/components/pages/Fun404Page";
 
 ---
 
+
+
 ## 部署
 
 独立部署：构建 `dist/` 后上传任意静态托管。
@@ -221,6 +265,3 @@ import Fun404Page from "@/components/pages/Fun404Page";
 
 ---
 
-## 许可
-
-示例项目，可自由用于个人博客二次开发。
