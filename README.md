@@ -1,4 +1,4 @@
-![fun-page-404 示例](https://img.huchao.vip/file/post/blog/1784212489056_image.png)
+![fun-page-404 示例](https://img.huchao.vip/file/post/blog/1784212915569_image.png)
 
 # fun-page-404 — 毛の博客创意 404 页
 
